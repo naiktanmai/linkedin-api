@@ -32,6 +32,7 @@ class Client(object):
         "accept-language": "en-AU,en-GB;q=0.9,en-US;q=0.8,en;q=0.7",
         "x-li-lang": "en_US",
         "x-restli-protocol-version": "2.0.0",
+        "Cache-Control" : "no-cache"
         # "x-li-track": '{"clientVersion":"1.2.6216","osName":"web","timezoneOffset":10,"deviceFormFactor":"DESKTOP","mpName":"voyager-web"}',
     }
 

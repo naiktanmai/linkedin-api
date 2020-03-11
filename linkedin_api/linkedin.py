@@ -59,6 +59,7 @@ class Linkedin(object):
         evade()
 
         url = f"{self.client.API_BASE_URL}{uri}"
+        print(url)
         return self.client.session.get(url, **kwargs)
 
     def _post(self, uri, evade=default_evade, **kwargs):
@@ -145,7 +146,7 @@ class Linkedin(object):
         if connection_of:
             filters.append(f"connectionOf->{connection_of}")
         if network_depth:
-            filters.append(f"network->{network_depth}")
+            filters.append(f'network->{"|".join(network_depth)}')
         if regions:
             filters.append(f'geoRegion->{"|".join(regions)}')
         if industries:
@@ -167,7 +168,7 @@ class Linkedin(object):
 
         if keywords:
             params["keywords"] = keywords
-
+        print(params)
         data = self.search(params, limit=limit)
 
         results = []

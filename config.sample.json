@@ -1,0 +1,6 @@
+{
+  "companies": ["fiverr-com", "accion-labs"],
+  "user": <user_email>,
+  "pwd": <user_password>,
+  "urn": <user_self_urn>: eg. tanmai-naik from https://www.linkedin.com/in/tanmai-naik/
+}
